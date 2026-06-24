@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<shape xmlns:android="http://schemas.android.com/apk/res/android"
+    android:shape="rectangle">
+
+    <!-- 设置背景颜色为不透明的白色 -->
+    <solid android:color="#F7FFFFFF" />
+
+    <!-- 设置圆角，半径足够大就会形成胶囊形状 -->
+    <corners android:radius="50dp" />
+
+</shape>

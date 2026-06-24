@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#fafafa"
+    android:hardwareAccelerated="true"
+    android:orientation="vertical"
+    tools:context="com.ozhuyesu.WebActivity">
+    <FrameLayout
+        android:id="@+id/fl_video"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="gone" />
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginBottom="0dp"
+        android:layout_marginTop="0dp"
+        android:layout_weight="1"
+        android:background="#fff">
+
+        <!-- 将 WebView 替换为自定义的 ScrollAwareWebView -->
+        <com.ozhuyesu.ScrollAwareWebView
+            android:id="@+id/webView"
+            android:scrollbars="none"
+            android:focusable="true"
+            android:focusableInTouchMode="true"
+            android:layout_above="@+id/progressBar"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+
+        <ProgressBar
+            android:id="@+id/progressBar"
+            style="?android:attr/progressBarStyle"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:layout_gravity="center"
+            android:indeterminate="true"
+            android:indeterminateDrawable="@drawable/rotatable_custom_loader" />
+        <!-- 新增：胶囊背景View -->
+        <View
+            android:id="@+id/buttons_background_view"
+            android:layout_width="match_parent"
+            android:layout_height="72dp"
+            android:layout_gravity="bottom|center_horizontal"
+            android:layout_marginStart="16dp"
+            android:layout_marginEnd="16dp"
+            android:layout_marginBottom="16dp"
+            android:background="@drawable/bottom_buttons_background"
+            android:elevation="0dp"
+            android:outlineAmbientShadowColor="#777777"
+            android:outlineSpotShadowColor="#777777" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="72dp"
+            android:layout_gravity="bottom"
+            android:layout_marginStart="16dp"
+            android:layout_marginEnd="16dp"
+            android:layout_marginBottom="16dp"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <ImageButton
+                android:id="@+id/floating_home_button"
+                style="@style/Widget.AppCompat.Button.Borderless"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@drawable/circular_ripple"
+                android:contentDescription="主页"
+                android:src="@drawable/home"
+                app:tint="#0d67d9" />
+
+            <ImageButton
+                android:id="@+id/floating_share_button"
+                style="@style/Widget.AppCompat.Button.Borderless"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@drawable/circular_ripple"
+                android:contentDescription="分享"
+                android:src="@drawable/share"
+                app:tint="#0d67d9" />
+
+            <ImageButton
+                android:id="@+id/floating_qrcode_button"
+                style="@style/Widget.AppCompat.Button.Borderless"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@drawable/circular_ripple"
+                android:contentDescription="二维码"
+                android:src="@drawable/ic_qr_code"
+                app:tint="#0d67d9" />
+
+            <ImageButton
+                android:id="@+id/floating_back_button"
+                style="@style/Widget.AppCompat.Button.Borderless"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@drawable/circular_ripple"
+                android:contentDescription="返回"
+                android:src="@drawable/back"
+                app:tint="#0d67d9" />
+        </LinearLayout>
+    </FrameLayout>
+
+
+</LinearLayout>

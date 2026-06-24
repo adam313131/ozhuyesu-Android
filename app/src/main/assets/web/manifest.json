@@ -1,0 +1,35 @@
+{
+    "name": "哦主耶稣",
+    "short_name": "哦主耶稣",
+    "description": "凡呼求主名的，就必得救。-徒二21",
+    "start_url": "/",
+    "display": "fullscreen",
+    "background_color": "#fff",
+    "theme_color": "#fff",
+    "icons": [
+      {
+        "src": "images/avatar.png",
+        "sizes": "128x128",
+        "type": "image/png",
+        "purpose": "any"
+      },
+      {
+        "src": "images/avatar@2x.png",
+        "sizes": "256x256",
+        "type": "image/png",
+        "purpose": "any"
+      },
+      {
+        "src": "images/icon-192.png",
+        "sizes": "192x192",
+        "type": "image/png",
+        "purpose": "any"
+      },
+      {
+        "src": "images/icon-512.png",
+        "sizes": "512x512",
+        "type": "image/png",
+        "purpose": "any"
+      }
+    ]
+  }

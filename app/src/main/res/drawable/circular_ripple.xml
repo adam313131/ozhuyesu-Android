@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <!-- 按下状态：半透明灰色圆形 -->
+    <item android:state_pressed="true">
+        <shape android:shape="oval">
+            <solid android:color="#FFFFFF" /> <!-- 50% 透明度的灰色 -->
+            <size android:width="56dp" android:height="56dp" />
+        </shape>
+    </item>
+
+    <!-- 默认状态：半透明白色圆形 -->
+    <item>
+        <shape android:shape="oval">
+            <solid android:color="#00FFFFFF" /> <!-- 50% 透明度的白色 -->
+            <size android:width="56dp" android:height="56dp" />
+        </shape>
+    </item>
+
+</selector>

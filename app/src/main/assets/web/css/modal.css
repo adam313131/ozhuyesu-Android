@@ -1,0 +1,139 @@
+/* --- Modal Styles --- */
+
+/* Style for the body when a modal is open */
+body.modal-is-open {
+    overflow: hidden; /* Prevent background scrolling */
+  }
+  
+  /* Optional: Apply blur directly to the page content when modal is open */
+  /* This might have performance implications */
+  /*
+  body.modal-is-open #page-content {
+    filter: blur(5px);
+    transition: filter 0.3s ease-in-out;
+  }
+  */
+  
+  /* The Modal Wrapper (covers entire screen, initially hidden) */
+  .modal {
+    display: none; /* Hidden by default */
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 1000; /* Ensure it's on top */
+    /* Use flexbox to center the modal-container */
+    align-items: center;
+    justify-content: center;
+  }
+  
+  /* Make modal visible when active */
+  .modal.is-open {
+    display: flex; /* Or 'block', but flex is good for centering */
+  }
+  
+  /* The Overlay (dims and blurs the background) */
+  .modal-overlay {
+    position: fixed; /* Cover the entire viewport */
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(255, 255, 255, 0.5); /* Semi-transparent black */
+  
+    /* The Blur Effect - Add vendor prefixes for wider support */
+    -webkit-backdrop-filter: blur(20px);
+    backdrop-filter: blur(20px);
+  
+    /* Ensure overlay is clickable to close */
+    cursor: pointer;
+  }
+  
+  /* The Modal Container (holds the actual content) */
+  .modal-container {
+    position: relative; /* Allows absolute positioning inside for close button */
+    padding: 25px;
+    border-radius: 8px;
+    max-height: 90vh; /* Max height */
+    max-width: 90%;   /* Max width for smaller screens */
+    width: 500px;     /* Default width */
+    overflow-y: auto; /* Add scroll if content exceeds max height */
+    z-index: 1001;    /* Sit on top of the overlay */
+    box-sizing: border-box; /* Include padding in width/height calculations */
+  
+    /* Optional: Add animation */
+    animation: modal-slide-in 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+  }
+  
+  /* Modal Header */
+  .modal-header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-bottom: 15px;
+    margin-bottom: 15px;
+  }
+  
+  .modal-title {
+    margin: 0;
+    font-size: 1.4em;
+    font-weight: 600;
+    color: #333;
+  }
+  
+  /* Modal Close Button */
+  .modal-close {
+    background: transparent;
+    border: 0;
+    padding: 0;
+    margin: 0;
+    font-size: 1.8rem; /* Adjust size as needed */
+    line-height: 1;
+    color: #888;
+    cursor: pointer;
+    transition: color 0.2s ease;
+  }
+  
+  .modal-close:hover {
+    color: #333;
+  }
+  
+  /* Modal Content Area */
+  .modal-content {
+    color: #444;
+    line-height: 1.6;
+  }
+  
+  /* Button Stack specific to the modal */
+  .modal-button-stack {
+    display: flex;
+    flex-direction: column;
+    gap: 12px; /* Spacing between buttons */
+    margin-top: 10px;
+  }
+  
+  /* Style modal buttons (can inherit from .button or define specifics) */
+  .modal-button-stack .button {
+    width: 100%; /* Make buttons full width of modal content area */
+    box-sizing: border-box;
+    margin: 0; /* Override any default margins */
+    text-align: center;
+    font-size: 1em; /* Adjust as needed */
+    padding: 15px 15px; /* Adjust padding */
+  }
+  
+  
+  /* Animation Keyframes (Optional) */
+  @keyframes modal-slide-in {
+    0% {
+      transform: translateY(30px);
+      opacity: 0;
+    }
+    100% {
+      transform: translateY(0);
+      opacity: 1;
+    }
+  }
+  
+  /* --- End Modal Styles --- */

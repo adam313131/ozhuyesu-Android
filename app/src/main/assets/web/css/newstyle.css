@@ -1,0 +1,688 @@
+:root {
+	font-size:16px;
+}
+
+/* Grid
+  –––––––––––––––––––––––––––––––––––––––––––––––––– */
+  .container {
+	position:relative;
+	width:100%;
+	max-width:37.5rem;     				/* 600px */
+    text-align:center;
+	margin:0 auto;
+	padding:3rem 1.25rem 0 1.25rem;
+	box-sizing:border-box;
+}
+.container-left {
+	position:relative;
+	width:100%;
+	max-width:37.5rem;
+	text-align:left;
+	margin:0 auto;
+	padding:0 1.25rem;
+	box-sizing:border-box;
+}
+.container-left p {
+	margin-bottom: 1rem;  				/* 16px space between paragraphs */
+  }
+.column {
+	position:center;
+	width:100%;
+	float:center;
+	box-sizing:border-box;
+}
+/* For devices larger than 400px */
+  @media (min-width:25rem) {            /* 400px */
+    .container {
+	width:85%;
+	padding-left:0;
+	padding-right:0;
+}
+}/* For devices larger than 550px */
+  @media (min-width:34.375rem) {        /* 550px */
+    .container {
+	width:80%;
+}
+.column,.columns {
+	margin-left:0;
+}
+.column:first-child,.columns:first-child {
+	margin-left:0;
+}
+}
+
+/* Base Styles
+  –––––––––––––––––––––––––––––––––––––––––––––––––– */
+  body {
+	margin:0;
+	padding:0;
+	background-color:#ffffff;
+	color:#1a1a1a;
+	font-family:"Open Sans",system-ui;
+	font-size:1.125rem;     				/* 18px */
+    font-weight:400;
+	line-height:1.6;
+}
+
+/* Typography
+  –––––––––––––––––––––––––––––––––––––––––––––––––– */
+  h1 {
+	margin:0 0 0.5rem 0;
+	font-size:3rem;         		/* 48px */
+    font-weight:800;
+	line-height:1;
+	letter-spacing:0;
+	word-wrap:break-word;
+	overflow-wrap:break-word;
+	hyphens:auto;           		/* Delete this to remove automatic hyphen on line break */
+}
+.container p {
+	margin:0 0 2rem 0;
+}
+
+/* Base Typography Settings
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+/* Base size - 16px browser default */
+:root {
+  font-size:16px;           /* Using a 1.25 modular scale for typography */
+  --scale-0:1rem;           /* 16px */
+  --scale-1:1.25rem;        /* 20px */
+  --scale-2:1.563rem;       /* 25px */
+  --scale-3:1.953rem;       /* 31px */
+  --scale-4:2.441rem;       /* 39px */
+  --scale-5:3.052rem;       /* 49px */
+  
+  /* Spacing units */
+  --spacing-xs:0.5rem;      /* 8px */
+  --spacing-s:1rem;         /* 16px */
+  --spacing-m:1.5rem;       /* 24px */
+  --spacing-l:2rem;         /* 32px */
+  --spacing-xl:3rem;        /* 48px */
+  --spacing-xxl:4rem;       /* 64px */
+}
+
+/* Avatar */
+.avatar {
+	width: 10rem;             /* 128px */
+	height: 10rem;
+	border-radius: 50%;
+	object-fit: cover;
+	background-position: center;
+	margin-bottom: var(--spacing-l);
+	margin-left: auto;
+	margin-right: auto;
+	display: block;
+  }
+
+/* Typography Scale */
+h1 {
+	margin:0 0 var(--spacing-m) 0;
+	font-size:var(--scale-3);           /* ~49px */
+  	font-weight:800;
+	line-height:1.1;
+	letter-spacing:-0.02em;
+	word-wrap:break-word;
+	overflow-wrap:break-word;
+}
+body {
+	font-size:var(--scale-1);           /* 20px */
+  	line-height:1.6;
+}
+.container p {
+	margin:0 0 var(--spacing-xl) 0;
+	font-size:var(--scale-1);
+	line-height:1.6;
+	font-size: 14px;
+	color: #999;
+}
+
+/* Container spacing */
+.container {
+	padding:var(--spacing-xl) var(--spacing-m) 0 var(--spacing-m);
+	text-align:center;
+}
+
+/* Footer */
+footer {
+	margin:var(--spacing-xxl) 0;            /* 4rem (64px) top and bottom */
+    font-size:var(--scale-0);
+  bottom: 0; /* 新增 */
+  left: 0; /* 新增 */
+  width: 100%; /* 新增 */
+  padding: 1rem 1.25rem; /* 调整内边距，确保内容不会紧贴边缘 */
+  display: flex; /* 新增 */
+  flex-direction: column; /* 新增：使子元素垂直排列 */
+  align-items: center;   /* 新增：水平居中子元素 */
+  justify-content: center; /* 新增：垂直方向上也居中（如果 footer 高度大于内容）*/
+  z-index: 999; /* 新增：确保 footer 在页面内容之上，但低于模态框 */
+  font-size:var(--scale-0); /* 保持原有字体大小 */
+  text-align: center; /* 保持，用于 footer 内 a 标签文本的居中 */
+}
+
+/* Responsive adjustments */
+@media (max-width:34.375rem) {              /* 550px */
+  h1 {
+	font-size:var(--scale-4);
+}
+body {
+	font-size:var(--scale-0);
+}
+.container p {
+	font-size:var(--scale-0);
+}
+.avatar {
+	margin-bottom:var(--spacing-m);
+}
+footer {
+	margin:var(--spacing-s) 0;         	/* 3rem (48px) top and bottom */
+}
+}
+
+/* Links
+  –––––––––––––––––––––––––––––––––––––––––––––––––– */
+  a {
+	text-decoration:none;
+	color: #999;
+	font-size: 14px;
+}
+a:hover {
+	color:#777;
+}
+
+/* Buttons
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+.button,button {
+	display:inline-flex;
+	align-items:center;
+	justify-content:center;
+	width:18.75rem;             	/* 300px */
+ 	min-height:3.7rem;                /* 48px */
+  	padding:0.75rem 1rem;         	/* 12px ; 16px */
+  	font-size:1.125rem;           	/* 18px */
+  	font-weight:700;
+	text-decoration:none;
+	white-space:normal;
+  	background-color:var(--button-background,transparent);
+	color:var(--button-text,#000000);
+	border:var(--button-border,none);
+	border-radius:0.5rem;
+	cursor:pointer;
+	box-sizing:border-box;
+	hyphens:auto;               	/* Delete this to remove automatic hyphen on line break */
+  	margin-bottom:1rem;
+	text-align:center;
+	line-height:1.3;
+}
+
+/* Icons
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+.icon {
+	width:2rem;
+	height:2em;
+	margin-right:1rem;
+	flex-shrink:1;
+}
+
+/* Avatar
+  –––––––––––––––––––––––––––––––––––––––––––––––––– */
+.avatar {
+	width: 10rem;             /* 128px */
+	height: 10rem;
+	object-fit: cover;
+	background-position: center;
+	margin-bottom: var(--spacing-l);
+  }
+
+   /* Modifier for no avatar rounding */
+   .avatar--none {
+	border-radius: 0%;
+  }
+
+  /* Modifier for rounded avatar */
+  .avatar--rounded {
+	border-radius: 50%;
+  }
+  
+  /* Modifier for slightly rounded corners */
+  .avatar--soft {
+	border-radius: 0.5rem;   /* 8px rounded corners */
+  }
+
+/* Theme System
+  –––––––––––––––––––––––––––––––––––––––––––––––––– */
+/* Light theme is default above */
+  
+/* Dark theme */
+:root.theme-dark {
+	color-scheme:dark;
+}
+:root.theme-dark :focus-visible {
+	outline: 2px solid #4899F7;
+	outline-offset: 2px;
+  }
+:root.theme-dark body {
+	background-color:#121212;
+	color:#ffffff;
+}
+:root.theme-dark a:not(.button) {
+	color:#999;
+}
+:root.theme-dark a:not(.button):hover {
+	color:#fff;
+}
+
+/* Auto theme */
+:root.theme-auto {
+	color-scheme:light dark;
+}
+@media (prefers-color-scheme:dark) {
+	:root.theme-auto body {
+	background-color:#121212;
+	color:#ffffff;
+}
+:root.theme-auto :focus-visible {
+    outline: 2px solid #4899F7;
+    outline-offset: 2px;
+  }
+:root.theme-auto a:not(.button) {
+	color:#4899F7;
+}
+:root.theme-auto a:not(.button):hover {
+	color:#7AB8FF;
+}
+}
+
+/* Button Text Color Override
+    –––––––––––––––––––––––––––––––––––––––––––––––––– */
+    .button:hover,button:hover {
+	color:var(--button-text);
+}
+
+/* Responsive Typography
+  –––––––––––––––––––––––––––––––––––––––––––––––––– */
+  @media (max-width:34.375rem) {            /* 550px */
+    h1 {
+	font-size:1.5rem;                         /* 32px */
+	}
+	body {
+	font-size:1rem;                    		/* 16px */
+	background: #fafafa;
+	}
+}
+
+/* Privacy Page Styles
+  –––––––––––––––––––––––––––––––––––––––––––––––––– */
+nav {
+	margin:var(--spacing-l) 0;
+	text-align:left;
+}
+section {
+	margin:var(--spacing-xl) 0;
+	text-align:left;
+}
+h2 {
+	font-size:var(--scale-3);
+	font-weight:700;
+	margin-bottom:var(--spacing-m);
+}
+h3 {
+	font-size:var(--scale-2);
+	font-weight:600;
+	margin:var(--spacing-l) 0 var(--spacing-s) 0;
+}
+ul {
+	list-style:none;
+	padding:0;
+	margin:0 0 var(--spacing-m) 0;
+}
+ul li {
+	margin-bottom:var(--spacing-xs);
+}
+
+/* Privacy page specific responsive adjustments */
+  @media (max-width:34.375rem) {
+	h2 {
+	font-size:var(--scale-2);
+	}
+	h3 {
+	font-size:var(--scale-1);
+	}
+	section {
+	margin:var(--spacing-l) 0;
+	}
+}
+/* 新增 */
+      /* --- Theme Toggle Button Styles (灯光按钮) --- */
+      .theme-toggle-container {
+       
+        /* margin-top: 0.5rem;  将由父容器控制间距 */
+      }
+      .theme-toggle-checkbox,
+      .acceleration-toggle-checkbox { /* 合并通用隐藏样式 */
+        display: none;
+      }
+      .theme-toggle-label,
+      .acceleration-toggle-label { /* 合并通用标签样式 */
+        display: block;
+        width: 90px;
+        height: 30px;
+        border-radius: 15px;
+        position: relative;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+      }
+      .theme-toggle-label .theme-toggle-switch,
+      .acceleration-toggle-label .acceleration-toggle-switch { /* 合并通用滑块圆点样式 */
+        display: block;
+        width: 22px;
+        height: 22px;
+        background-color: white; /* 默认圆点颜色 */
+        border-radius: 50%;
+        position: absolute;
+        top: 4px;
+        left: 5px;
+        transition: transform 0.3s ease;
+        z-index: 1;
+      }
+
+      /* 灯光按钮 spécifique */
+      .theme-toggle-label {
+        background-color: #eee; /* 浅色模式，未选中（开灯状态）时轨道的背景色 */
+      }
+      .theme-toggle-checkbox:checked + .theme-toggle-label {
+        background-color: #0D67D9; /* 浅色模式，选中（关灯状态）时轨道的背景色 */
+      }
+      .theme-toggle-checkbox:checked + .theme-toggle-label .theme-toggle-switch {
+        transform: translateX(58px);
+      }
+      .theme-toggle-label::before,
+      .theme-toggle-label::after {
+        content: "";
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        font-size: 12px;
+        transition: opacity 0.3s ease, color 0.3s ease;
+        z-index: 0;
+      }
+      .theme-toggle-label::before { content: "夜晚模式"; left: 10px; }
+      .theme-toggle-label::after { content: "夜晚模式"; right: 10px; }
+      .theme-toggle-checkbox + .theme-toggle-label::before { opacity: 0; color: #333; }
+      .theme-toggle-checkbox + .theme-toggle-label::after { opacity: 1; color: #999; }
+      .theme-toggle-checkbox:checked + .theme-toggle-label::before { opacity: 1; color: #fff; }
+      .theme-toggle-checkbox:checked + .theme-toggle-label::after { opacity: 0; color: #fff; }
+      :root.theme-dark .theme-toggle-label { background-color: #555; }
+      :root.theme-dark .theme-toggle-checkbox:checked + .theme-toggle-label { background-color: #4899F7; }
+      :root.theme-dark .theme-toggle-label .theme-toggle-switch { background-color: #ddd; }
+      :root.theme-dark .theme-toggle-checkbox + .theme-toggle-label::before { color: #aaa; }
+      :root.theme-dark .theme-toggle-checkbox + .theme-toggle-label::after { color: #fff; }
+      :root.theme-dark .theme-toggle-checkbox:checked + .theme-toggle-label::before { color: #fff; }
+      :root.theme-dark .theme-toggle-checkbox:checked + .theme-toggle-label::after { color: #a0cfff; }
+
+
+      /* --- Acceleration Toggle Button Styles (加速按钮) --- */
+      .acceleration-toggle-container {
+         /* 与主题切换按钮保持一致 */
+      }
+      /* 加速按钮特定的轨道背景色 */
+      .acceleration-toggle-label {
+        background-color: #eee; /* 未激活时的轨道背景 */
+		margin-left: 1rem;
+      }
+      .acceleration-toggle-checkbox:checked + .acceleration-toggle-label {
+        background-color: #e9643c; /* 激活时的轨道背景 (例如绿色) */
+      }
+       /* 加速按钮滑块移动 */
+      .acceleration-toggle-checkbox:checked + .acceleration-toggle-label .acceleration-toggle-switch {
+        transform: translateX(58px);
+      }
+      /* 加速按钮文字 (使用与灯光按钮相同的伪元素逻辑，但内容不同) */
+      .acceleration-toggle-label::before,
+      .acceleration-toggle-label::after {
+        content: "";
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        font-size: 12px;
+        transition: opacity 0.3s ease, color 0.3s ease;
+        z-index: 0;
+      }
+      .acceleration-toggle-label::before { content: "链接加速"; right: 10px; } /* 或 "关闭" */
+      .acceleration-toggle-label::after { content: "已开加速"; left: 10px; } /* 或 "开启" */
+
+      /* 加速按钮文字显隐及颜色 - 未选中 (原速) */
+      .acceleration-toggle-checkbox + .acceleration-toggle-label::before { opacity: 1; color: #999; } /* 显示 "原速" */
+      .acceleration-toggle-checkbox + .acceleration-toggle-label::after { opacity: 0; color: #333; }  /* 隐藏 "加速" */
+      /* 加速按钮文字显隐及颜色 - 选中 (加速) */
+      .acceleration-toggle-checkbox:checked + .acceleration-toggle-label::before { opacity: 0; color: #fff; } /* 隐藏 "原速" */
+      .acceleration-toggle-checkbox:checked + .acceleration-toggle-label::after { opacity: 1; color: #fff; }  /* 显示 "加速" */
+
+      /* 深色模式下的加速按钮特定样式 */
+      :root.theme-dark .acceleration-toggle-label {
+        background-color: #555; /* 深色模式未激活轨道背景 */
+      }
+      :root.theme-dark .acceleration-toggle-checkbox:checked + .acceleration-toggle-label {
+        background-color: #e9643c; /* 深色模式激活轨道背景 (例如深色友好绿色) */
+      }
+      :root.theme-dark .acceleration-toggle-label .acceleration-toggle-switch {
+          background-color: #ddd; /* 确保圆点在深色模式下可见 */
+      }
+      /* 深色模式下的加速按钮文字颜色 - 未选中 (原速) */
+      :root.theme-dark .acceleration-toggle-checkbox + .acceleration-toggle-label::before { color: #fff; }
+      :root.theme-dark .acceleration-toggle-checkbox + .acceleration-toggle-label::after { color: #aaa; }
+      /* 深色模式下的加速按钮文字颜色 - 选中 (加速) */
+      :root.theme-dark .acceleration-toggle-checkbox:checked + .acceleration-toggle-label::before { color: #a0cfff; } /* 或与背景对比好的颜色 */
+      :root.theme-dark .acceleration-toggle-checkbox:checked + .acceleration-toggle-label::after { color: #fff; }
+
+      /* 新增：用于包裹两个切换按钮的容器 */
+      .footer-toggles-wrapper {
+        display: flex;
+        justify-content: center; /* 水平居中两个按钮 */
+        /*gap: 1rem;  两个按钮之间的间距 */
+        margin-top: 1.75rem; /* 与上方页脚文本的间距 */
+      }
+	  /* --- Language Toggle Button Styles (繁简切换 - OpenCC版) --- */
+.lang-toggle-container {
+  /* 继承容器属性 */
+}
+.lang-toggle-checkbox {
+  display: none;
+}
+.lang-toggle-label {
+  display: block;
+  width: 90px;
+  height: 30px;
+  border-radius: 15px;
+  position: relative;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  background-color: #eee;
+  margin-left: 1rem;
+}
+.lang-toggle-label .lang-toggle-switch {
+  display: block;
+  width: 22px;
+  height: 22px;
+  background-color: white;
+  border-radius: 50%;
+  position: absolute;
+  top: 4px;
+  left: 5px;
+  transition: transform 0.3s ease;
+  z-index: 1;
+}
+
+/* 激活状态背景色 (紫色) */
+.lang-toggle-checkbox:checked + .lang-toggle-label {
+  background-color: #9146ff;
+}
+.lang-toggle-checkbox:checked + .lang-toggle-label .lang-toggle-switch {
+  transform: translateX(58px);
+}
+
+/* 按钮文字标签 */
+.lang-toggle-label::before,
+.lang-toggle-label::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 12px;
+  transition: opacity 0.3s ease, color 0.3s ease;
+  z-index: 0;
+}
+.lang-toggle-label::before { content: "切换繁体"; right: 10px; }
+.lang-toggle-label::after { content: "繁体模式"; left: 10px; }
+
+/* 文字显隐逻辑 */
+.lang-toggle-checkbox + .lang-toggle-label::before { opacity: 1; color: #999; }
+.lang-toggle-checkbox + .lang-toggle-label::after { opacity: 0; color: #333; }
+.lang-toggle-checkbox:checked + .lang-toggle-label::before { opacity: 0; color: #fff; }
+.lang-toggle-checkbox:checked + .lang-toggle-label::after { opacity: 1; color: #fff; }
+
+/* 深色模式适配 */
+:root.theme-dark .lang-toggle-label { background-color: #555; }
+:root.theme-dark .lang-toggle-checkbox:checked + .lang-toggle-label { background-color: #9146ff; }
+:root.theme-dark .lang-toggle-label .lang-toggle-switch { background-color: #ddd; }
+:root.theme-dark .lang-toggle-checkbox + .lang-toggle-label::before { color: #fff; }
+:root.theme-dark .lang-toggle-checkbox + .lang-toggle-label::after { color: #aaa; }
+:root.theme-dark .lang-toggle-checkbox:checked + .lang-toggle-label::before { color: #e0ccff; }
+:root.theme-dark .lang-toggle-checkbox:checked + .lang-toggle-label::after { color: #fff; }
+
+/* 调整容器以容纳三个按钮 */
+.footer-toggles-wrapper {
+    flex-wrap: wrap;
+    gap: 0.5rem;
+}
+
+/*
+* PWA Install Prompt Styles
+* –––––––––––––––––––––––––––––––––––––––––––––––– */
+#install-prompt,#apk-prompt,#ios-prompt {
+  display: none; /* Initially hidden */
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background: rgba(255, 255, 255, 0.5);
+    -webkit-backdrop-filter: blur(20px);
+    backdrop-filter: blur(20px);
+  color: var(--button-text, #000);
+  box-shadow: 0 -2px 10px rgba(0,0,0,0.05);
+  z-index: 2000;
+  transition: transform 0.3s ease-in-out;
+  transform: translateY(100%); /* Start off-screen */
+}
+#ozhuyesu-prompt {
+  display: none; /* Initially hidden */
+  border-radius: 10rem;
+  position: fixed;
+  top: 2.5%;
+  left: 5%;
+  width: 90%;
+  background: rgba(255, 255, 255, 0.5);
+    -webkit-backdrop-filter: blur(20px);
+    backdrop-filter: blur(20px);
+  color: var(--button-text, #000);
+  box-shadow: 0px 10px 20px 5px rgba(0, 0, 0, 0.05);
+  z-index: 2000;
+  transition: transform 0.3s ease-in-out;
+  transform: translateY(100%); /* Start off-screen */
+}
+
+#install-prompt[style*="display: block"] {
+    transform: translateY(0); /* Slide in */
+}
+#apk-prompt[style*="display: block"] {
+    transform: translateY(0); /* Slide in */
+}
+#ios-prompt[style*="display: block"] {
+    transform: translateY(0); /* Slide in */
+}
+#ozhuyesu-prompt[style*="display: block"] {
+  transform: translateY(0); /* Slide in */
+}
+
+.install-prompt-container {
+  /* max-width: 600px; Match the main container width */
+  margin: 0 auto;
+  padding: 1rem 1.25rem;
+}
+
+.install-prompt-content {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.install-prompt-icon {
+  width: 48px;
+  height: 48px;
+  border-radius: 8px;
+  flex-shrink: 0;
+}
+
+.install-prompt-text {
+  flex-grow: 1;
+  text-align: left;
+}
+
+.install-prompt-title {
+  font-weight: 700;
+  font-size: 1rem;
+}
+
+.install-prompt-description {
+  font-size: 0.875rem;
+  opacity: 0.8;
+}
+
+.install-prompt-button {
+  background-color: #0d67d9;
+  color: #ffffff;
+  border: none;
+  border-radius: 0.5rem;
+  padding: 0.5rem 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  white-space: nowrap;
+  margin-bottom: 0rem;
+  width: 5rem;
+  text-align: center;
+}
+
+.install-prompt-button:hover {
+  filter: brightness(110%);
+}
+
+.install-prompt-close {
+  background: transparent;
+  border: none;
+  font-size: 1.5rem;
+  color: var(--button-text, #000);
+  opacity: 0.6;
+  cursor: pointer;
+  padding: 0 0.5rem;
+  width: 2rem;
+  margin-bottom: 0rem;
+}
+.install-prompt-close:hover {
+  opacity: 1;
+}
+/* --- Specific styles for iOS instructional prompt --- */
+.ios-instruction-text {
+  font-size: 0.9rem;
+  line-height: 1.4;
+}
+
+.ios-share-icon {
+  display: inline-block;
+  width: 1.4em;
+  height: 1.2em;
+  margin: 0 0.2em;
+  vertical-align: text-bottom;
+  background-image: url('../images/ios-share.png');
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+}
